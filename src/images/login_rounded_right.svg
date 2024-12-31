@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="22.4891" y1="23.1667" x2="22.4891" y2="41.0329" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#6DC7FF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#E6ABFF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="34.2844" y1="7" x2="34.2844" y2="57.1678" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="34.3499" y1="7" x2="34.3499" y2="57.1678" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 303.792969 242.535156 L 212 193.007813 C 206.632813 190.105469 200 193.824219 200 199.734375 L 200 232 C 200 236.414063 196.414063 240 192 240 L 56 240 C 51.585938 240 48 243.585938 48 248 L 48 264 C 48 268.414063 51.585938 272 56 272 L 192 272 C 196.414063 272 200 275.585938 200 280 L 200 312.265625 C 200 318.167969 206.632813 321.886719 211.992188 318.992188 L 303.785156 269.464844 C 314.503906 263.6875 314.503906 248.3125 303.792969 242.535156 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 272 448 C 182.6875 448 103.847656 384.808594 84.550781 297.742188 L 100.167969 294.273438 C 117.863281 374.078125 190.128906 432 272 432 C 369.046875 432 448 353.046875 448 256 C 448 158.953125 369.046875 80 272 80 C 190.128906 80 117.863281 137.921875 100.167969 217.726563 L 84.550781 214.257813 C 103.847656 127.191406 182.6875 64 272 64 C 377.863281 64 464 150.136719 464 256 C 464 361.863281 377.863281 448 272 448 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 272 416 C 199.976563 416 136.488281 367.511719 117.601563 298.105469 L 133.039063 293.902344 C 150.03125 356.367188 207.175781 400 272 400 C 351.398438 400 416 335.398438 416 256 C 416 176.601563 351.398438 112 272 112 C 207.175781 112 150.03125 155.632813 133.03125 218.105469 L 117.59375 213.902344 C 136.488281 144.488281 199.984375 96 272 96 C 360.222656 96 432 167.777344 432 256 C 432 344.222656 360.222656 416 272 416 Z "/>
+</g>
+</svg>

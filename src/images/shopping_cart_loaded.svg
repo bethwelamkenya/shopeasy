@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512pt" height="512pt" viewBox="0 0 512 512" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="32" y1="10" x2="32" y2="54.9068" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="29" y1="10" x2="29" y2="54.9068" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="26" y1="10" x2="26" y2="54.9068" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="23" y1="10" x2="23" y2="54.9068" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#1A6DFF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#C822FF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="28" y1="8.75" x2="28" y2="17.557" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#6DC7FF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#E6ABFF;stop-opacity:1;"/>
+</linearGradient>
+<linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="41" y1="8.75" x2="41" y2="17.557" spreadMethod="reflect" gradientTransform="matrix(8,0,0,8,0,0)">
+<stop offset="0" style="stop-color:#6DC7FF;stop-opacity:1;"/>
+<stop offset="1" style="stop-color:#E6ABFF;stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 440 152 L 160 152 L 160 112 C 160 98.769531 149.230469 88 136 88 L 72 88 C 58.769531 88 48 98.769531 48 112 C 48 125.230469 58.769531 136 72 136 L 144 136 L 144 200 L 360 200 L 360 184 L 160 184 L 160 168 L 440 168 C 444.414063 168 448 171.59375 448 176 L 448 208 C 448 215.511719 444.414063 222.695313 438.40625 227.199219 L 331.734375 307.199219 C 327.601563 310.296875 322.496094 312 317.335938 312 L 168 312 C 154.769531 312 144 322.769531 144 336 L 144 360.808594 C 125.769531 364.527344 112 380.679688 112 400 C 112 422.054688 129.945313 440 152 440 C 171.320313 440 187.472656 426.230469 191.191406 408 L 256.808594 408 C 260.527344 426.230469 276.679688 440 296 440 C 318.054688 440 336 422.054688 336 400 C 336 377.945313 318.054688 360 296 360 C 276.679688 360 260.527344 373.769531 256.808594 392 L 191.191406 392 C 188 376.351563 175.648438 364 160 360.808594 L 160 336 C 160 331.59375 163.585938 328 168 328 L 317.335938 328 C 325.929688 328 334.457031 325.160156 341.328125 320 L 448.007813 240 C 458.023438 232.488281 464 220.519531 464 208 L 464 176 C 464 162.769531 453.230469 152 440 152 Z M 72 120 C 67.585938 120 64 116.40625 64 112 C 64 107.59375 67.585938 104 72 104 L 136 104 C 140.414063 104 144 107.59375 144 112 L 144 120 Z M 296 376 C 309.230469 376 320 386.769531 320 400 C 320 413.230469 309.230469 424 296 424 C 282.769531 424 272 413.230469 272 400 C 272 386.769531 282.769531 376 296 376 Z M 176 400 C 176 413.230469 165.230469 424 152 424 C 138.769531 424 128 413.230469 128 400 C 128 386.769531 138.769531 376 152 376 C 165.230469 376 176 386.769531 176 400 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);" d="M 144 216 L 320 216 L 320 232 L 144 232 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);" d="M 144 248 L 272 248 L 272 264 L 144 264 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);" d="M 144 280 L 224 280 L 224 296 L 144 296 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);" d="M 272 136 L 176 136 L 176 80 C 176 75.585938 179.585938 72 184 72 L 264 72 C 268.414063 72 272 75.585938 272 80 Z "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);" d="M 368 136 L 288 136 L 288 112 C 288 107.585938 291.585938 104 296 104 L 360 104 C 364.414063 104 368 107.585938 368 112 Z "/>
+</g>
+</svg>
