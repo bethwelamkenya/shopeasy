@@ -159,7 +159,7 @@ header {
 
 /* Cart */
 .header__cart::after {
-    content: " (0)"; /* Replace with dynamic cart item count */
+    content: " (" attr(data-count) ")";
     font-size: 14px;
     color: #E6ABFF;
 }
@@ -529,4 +529,20 @@ input:focus {
     font-weight: bold;
     margin-top: 30px;
     color: #333;
+}
+
+button {
+    /*width: 100%;*/
+    padding: 10px;
+    background: linear-gradient(90deg, #1A6DFF, #C822FF);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #6DC7FF, #E6ABFF);
 }

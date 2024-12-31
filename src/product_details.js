@@ -43,7 +43,9 @@ const ProductDetails = () => {
                 setError('An error occurred while adding to the cart.');
             }
         } catch (err) {
-            setError('An error occurred while adding to the cart: ' + err.message);
+            const serverMessage = err.response?.data?.message || err.message;
+            setError(serverMessage);
+            // setError('An error occurred while adding to the cart: ' + err.message);
         }
 
         setIsAdding(false);

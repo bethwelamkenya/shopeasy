@@ -210,6 +210,38 @@ app.get('/cart/:userId', (req, res) => {
     });
 });
 
+// Remove an item from the cart
+app.delete('/cart/remove', async (req, res) => {
+    const { userId, productId } = req.body;
+
+    if (!userId || !productId) {
+        return res.status(400).json({ success: false, message: 'User ID and Product ID are required' });
+    }
+
+    try {
+        // Execute the delete query using the defined connection
+        db.query(
+            'DELETE FROM cart WHERE userId = ? AND productId = ?',
+            [userId, productId],
+            (err, result) => {
+                if (err) {
+                    console.error('Error removing item from cart:', err);
+                    return res.status(500).json({ success: false, message: 'Error removing item from cart' });
+                }
+
+                if (result.affectedRows === 0) {
+                    return res.status(404).json({ success: false, message: 'Item not found in cart' });
+                }
+
+                res.status(200).json({ success: true, message: 'Item removed from cart' });
+            }
+        );
+    } catch (err) {
+        console.error('Unexpected error removing item from cart:', err);
+        res.status(500).json({ success: false, message: 'Unexpected error' });
+    }
+});
+
 // Start Server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

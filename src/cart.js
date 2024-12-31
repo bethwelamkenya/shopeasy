@@ -28,6 +28,28 @@ const Cart = () => {
         fetchCartItems();
     }, [userId]);
 
+    const handleRemoveFromCart = async (productId) => {
+        try {
+            const response = await axios.delete(`http://localhost:5000/cart/remove`, {
+                data: {
+                    userId,
+                    productId
+                }
+            });
+
+            if (response.data.success) {
+                // Optionally, you could remove the item from the local state without needing to refetch
+                // For example, filtering out the removed item:
+                setCartItems(cartItems.filter(item => item.id !== productId));
+            }
+        } catch (error) {
+            const serverMessage = error.response?.data?.message || error.message;
+            alert(serverMessage);
+            console.error('Error removing item from cart:', error);
+            // alert('An error occurred while removing the item from the cart.');
+        }
+    };
+
     return (
         <div className="cart-container">
             <h1 className="cart-header">Your Cart</h1>
@@ -46,7 +68,7 @@ const Cart = () => {
                                 <p>{item.description}</p>
                                 <p className="item-price">${item.price}</p>
                             </div>
-                            <button className="remove-btn">Remove</button>
+                            <button className="remove-btn"  onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
                         </div>
                     ))}
                     <div className="cart-summary">

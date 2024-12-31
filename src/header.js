@@ -1,10 +1,33 @@
 import shop from "./images/shop.svg";
 import search from "./images/search.svg";
 import cart from "./images/shopping_cart.svg";
+import axios from "axios";
+import {useEffect, useState} from "react";
 
 const Header = () => {
     const user = JSON.parse(localStorage.getItem("user"));
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const [cartItems, setCartItems] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            const fetchCartItems = async () => {
+                try {
+                    const response = await axios.get(`http://localhost:5000/cart/${user.id}`);
+                    if (response.data.success) {
+                        setCartItems(response.data.cartItems);
+                    } else {
+                        setError(response.data.message);
+                    }
+                } catch (err) {
+                    setError('An error occurred while fetching the cart items: ' + err.message);
+                }
+            };
+            fetchCartItems();
+        }
+
+    }, [user]);
 
     return (
         <header className="header">
@@ -29,7 +52,7 @@ const Header = () => {
 
                 {/* User Actions */}
                 <div className="header__actions">
-                    <a href="/cart" className="header__cart">
+                    <a href="/cart" className="header__cart" data-count={cartItems.length}>
                         <img src={cart} alt={"cart"} className={"search_icon"}/>
                     </a>
                     {isLoggedIn ? (
