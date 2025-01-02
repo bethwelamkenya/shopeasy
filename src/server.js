@@ -186,9 +186,9 @@ app.post('/cart', (req, res) => {
 app.get('/cart/:userId', (req, res) => {
     const userId = req.params.userId;
 
-    // Query to get all products in the user's cart
+    // Query to get all products in the user's cart, including productId
     const query = `
-        SELECT c.id, p.name, p.description, p.price, p.image_url
+        SELECT c.id AS cartId, c.productId, p.name, p.description, p.price, p.image_url
         FROM cart c
                  JOIN products p ON c.productId = p.id
         WHERE c.userId = ?
@@ -197,16 +197,16 @@ app.get('/cart/:userId', (req, res) => {
     db.query(query, [userId], (err, results) => {
         if (err) {
             console.error(err);
-            return res.status(500).json({success: false, message: 'Error retrieving cart items'});
+            return res.status(500).json({ success: false, message: 'Error retrieving cart items' });
         }
 
         // If no items in the cart
         if (results.length === 0) {
-            return res.status(200).json({success: true, message: 'No items in cart', cartItems: []});
+            return res.status(200).json({ success: true, message: 'No items in cart', cartItems: [] });
         }
 
         // Return the cart items
-        return res.status(200).json({success: true, cartItems: results});
+        return res.status(200).json({ success: true, cartItems: results });
     });
 });
 
@@ -230,7 +230,7 @@ app.delete('/cart/remove', async (req, res) => {
                 }
 
                 if (result.affectedRows === 0) {
-                    return res.status(404).json({ success: false, message: 'Item not found in cart' });
+                    return res.status(404).json({ success: false, message: `Item id ${productId} and user id ${userId} not found in cart` });
                 }
 
                 res.status(200).json({ success: true, message: 'Item removed from cart' });

@@ -40,7 +40,7 @@ const Cart = () => {
             if (response.data.success) {
                 // Optionally, you could remove the item from the local state without needing to refetch
                 // For example, filtering out the removed item:
-                setCartItems(cartItems.filter(item => item.id !== productId));
+                setCartItems(cartItems.filter(item => item.productId !== productId));
             }
         } catch (error) {
             const serverMessage = error.response?.data?.message || error.message;
@@ -61,14 +61,14 @@ const Cart = () => {
             ) : (
                 <div>
                     {cartItems.map((item) => (
-                        <div key={item.id} className="cart-item">
+                        <div key={item.cartID} className="cart-item">
                             <img src={item.image_url} alt={item.name} />
                             <div>
                                 <h3>{item.name}</h3>
                                 <p>{item.description}</p>
                                 <p className="item-price">${item.price}</p>
                             </div>
-                            <button className="remove-btn"  onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
+                            <button className="remove-btn"  onClick={() => handleRemoveFromCart(item.productId)}>Remove</button>
                         </div>
                     ))}
                     <div className="cart-summary">
