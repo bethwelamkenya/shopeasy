@@ -52,9 +52,9 @@ const ProductDetails = () => {
     };
 
     return (
-        <div>
+        <div className="centered-div">
             {product ? (
-                <div>
+                <div className="centered-div">
                     <h1>{product.name}</h1>
                     <img src={product.image_url} alt={product.name} />
                     <p>Price: ${product.price}</p>

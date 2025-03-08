@@ -1,0 +1,89 @@
+.accounts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.accounts-list {
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.account-card {
+    width: 100%;
+    position: relative;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: var(--header-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    cursor: pointer;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.account-card:hover {
+    background-color: var(--box-shadow);
+}
+
+.bank_name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.bank_name p {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--gradient-secondary);
+    color: var(--body-background);
+    text-align: center;
+}
+
+.amount {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: start;
+}
+
+.details_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.other_card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1px;
+}
+
+.other_card p {
+    padding: 0;
+    margin: 0;
+}
+
+.other_card h5 {
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+.add-transaction-container {
+
+}
+
+.transaction-types {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    gap: 5px;
+}
+
+.transaction-types p {
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid var(--gradient-secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    /*max-lines: 1;*/
+    text-align: center;
+}
+
+.transaction-types .selected {
+    background-color: var(--gradient-secondary);
+    color: var(--header-background);
+}
+
+.approve {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.approve .form-group {
+    width: 100%;
+}
+
+.approve .check {
+    margin-left: 5px;
+    margin-top: 35px;
+    /*align-self: baseline;*/
+}

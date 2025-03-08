@@ -1,0 +1,16 @@
+.clickable_icon {
+    cursor: pointer;
+}
+
+.rotating-icon {
+    animation: icon_rotate 3s infinite linear;
+}
+
+@keyframes icon_rotate {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

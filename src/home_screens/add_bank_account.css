@@ -1,0 +1,74 @@
+.add-account-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--header-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.add-account-container form {
+    background-color: var(--body-background);
+}
+
+.form-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 95%;
+    /*width: 100%;*/
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--gradient-secondary);
+    box-shadow: 0 0 0 2px var(--gradient-secondary-translucent);
+}
+
+.error-message {
+    color: #dc2626;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    color: #16a34a;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.currency-select {
+    color: var(--text-color);
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background: var(--body-background);
+}

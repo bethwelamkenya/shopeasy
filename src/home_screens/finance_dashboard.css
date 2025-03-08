@@ -1,0 +1,79 @@
+.finance-tracker {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+}
+
+.accounts-grid, .savings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.account-card, .savings-card {
+    background-color: var(--header-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    cursor: pointer;
+}
+
+.accounts-grid p, .savings-grid p {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+.accounts-grid h3, .savings-grid h3 {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
+
+.list-table {
+    width: 100%;
+    background-color: var(--header-background);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px var(--box-shadow);
+    border-collapse: collapse;
+}
+
+.list-table thead th {
+    padding: 10px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.list-table tbody td {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--box-shadow);
+}
+
+.list-table tbody tr td:first-child {
+    font-weight: bold;
+}
+
+.list-table tbody tr {
+    background-color: var(--header-background);
+    transition: scale 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.list-table tbody tr:hover {
+    box-shadow: 5px 5px 15px var(--gradient-secondary-translucent);
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-table tbody .empty-list:hover{
+    box-shadow: none;
+    cursor: auto;
+    scale: none;
+}

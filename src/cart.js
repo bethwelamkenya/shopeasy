@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 const Cart = () => {
@@ -60,17 +60,33 @@ const Cart = () => {
                 <p className="empty-cart-message">Your cart is empty. Start shopping now!</p>
             ) : (
                 <div>
-                    {cartItems.map((item) => (
-                        <div key={item.cartID} className="cart-item">
-                            <img src={item.image_url} alt={item.name} />
-                            <div>
-                                <h3>{item.name}</h3>
-                                <p>{item.description}</p>
-                                <p className="item-price">${item.price}</p>
-                            </div>
-                            <button className="remove-btn"  onClick={() => handleRemoveFromCart(item.productId)}>Remove</button>
-                        </div>
-                    ))}
+                    <table className="cart-table">
+                        <thead>
+                        <tr>
+                            <td>Product Image</td>
+                            <td>Product Name</td>
+                            <td>Description</td>
+                            <td>Price</td>
+                            <td></td>
+                        </tr>
+                        </thead>
+                        {cartItems.map((item) => (
+                            <tbody>
+                            <tr key={item.cartId}>
+                                <td><img src={item.image_url} alt={item.name}/></td>
+                                <td><h3>{item.name}</h3></td>
+                                <td><p>{item.description}</p></td>
+                                <td><p className="item-price">${item.price}</p></td>
+                                <td>
+                                    <button className="remove-btn"
+                                            onClick={() => handleRemoveFromCart(item.productId)}>Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        ))}
+                    </table>
                     <div className="cart-summary">
                         <p>Total: ${cartItems.reduce((total, item) => total + item.price, 0).toFixed(2)}</p>
                         <button className="remove-btn">Proceed to Checkout</button>

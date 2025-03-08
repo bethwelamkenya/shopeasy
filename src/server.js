@@ -148,6 +148,33 @@ app.post("/login", (req, res) => {
     });
 });
 
+app.get('/user/:email', (req, res) => {
+    const email = req.params.email;
+
+    if (!email) {
+        return res.status(400).json({success: false, message: 'Missing user email'});
+    }
+
+    // Replace this with your actual users table
+    const query = "SELECT * FROM users WHERE email = ?";
+    db.query(query, [email], async (err, results) => {
+        if (err) {
+            console.error("Error fetching user:", err.message);
+            res.status(500).json({success: false, message: "Internal server error"});
+            return res.status(500).json({success: false, message: 'Error checking user'});
+        }
+
+        if (results.length === 0) {
+            res.status(401).json({success: false, message: "Invalid email"});
+            return res.status(401).json({success: false, message: 'Invalid email'});
+        }
+
+        const user = results[0];
+        // res.json({success: true, user: {id: user.id, email: user.email, name: user.name}});
+        return res.status(200).json({success: true, user: {id: user.id, email: user.email, name: user.name, timestamp: user.addedAt}});
+    });
+});
+
 
 // Add item to cart
 app.post('/cart', (req, res) => {

@@ -1,0 +1,16 @@
+.terms-of-service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terms-of-service-container ol {
+}
+
+.terms-of-service-container ol li {
+    padding: 20px;
+}
+
+.terms-of-service-container ol h3 {
+    text-align: start;
+}

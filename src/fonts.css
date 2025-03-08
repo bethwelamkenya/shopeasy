@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "sofiasoft";
+    src: url("../public/fonts/SofiaProSoftReg.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: "sofiasoft";
+    src: url("../public/fonts/SofiaProSoftBold.otf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "sofiasoft";
+    src: url("../public/fonts/SofiaProSoftBoldit.otf");
+    font-weight: bold;
+    font-style: italic;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: "sofiasoft";
+    src: url("../public/fonts/SofiaProSoftRegit.otf");
+    font-weight: normal;
+    font-style: italic;
+    font-display: auto;
+}

@@ -1,0 +1,31 @@
+.account-details-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 20px;
+    /*justify-content: center;*/
+}
+
+.account-card {
+    align-self: center;
+}
+
+.indexing {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.account-heading {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.account-heading h1, .account-heading h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

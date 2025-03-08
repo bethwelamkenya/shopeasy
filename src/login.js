@@ -47,6 +47,7 @@ const Login = () => {
                     <input
                         type="email"
                         id="email"
+
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -62,7 +63,8 @@ const Login = () => {
                         required
                     />
                 </div>
-                <a href="/signup">Don't have an account? <span>Sign Up</span></a>
+                <div className="form-a"><a href="/signup">Don't have an account? <span>Sign Up</span></a></div>
+
                 <button type="submit" className="login-btn">
                     Log In
                 </button>

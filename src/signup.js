@@ -16,7 +16,7 @@ const SignUp = () => {
         setSuccess("");
 
         try {
-            const response = await axios.post("http://localhost:5000/signup", {
+            const response = await axios.post("http://localhost:5001/signup", {
                 email,
                 password,
                 name,
@@ -32,7 +32,7 @@ const SignUp = () => {
                 // Save user data to localStorage
                 localStorage.setItem("user", JSON.stringify(response.data.user));
                 localStorage.setItem("isLoggedIn", "true");
-                navigate("/"); // Redirect to login page
+                navigate("/"); // Redirect to home page
             }
         } catch (err) {
             if (err.response && err.response.data && err.response.data.message) {
@@ -79,7 +79,7 @@ const SignUp = () => {
                         required
                     />
                 </div>
-                <a href="/login">Already have an account? <span>Log In</span></a>
+                <div className="form-a"><a href="/login">Already have an account? <span>Log In</span></a></div>
                 <button type="submit" className="signup-btn">Sign Up</button>
             </form>
         </div>

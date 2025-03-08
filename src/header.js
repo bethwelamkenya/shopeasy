@@ -6,7 +6,8 @@ import {useEffect, useState} from "react";
 
 const Header = () => {
     const user = JSON.parse(localStorage.getItem("user"));
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const isLoggedIn = user != null;
+    // const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const [cartItems, setCartItems] = useState([]);
     const [error, setError] = useState(null);
 
@@ -24,7 +25,9 @@ const Header = () => {
                     setError('An error occurred while fetching the cart items: ' + err.message);
                 }
             };
-            fetchCartItems();
+            fetchCartItems().then(r => {
+                
+            });
         }
 
     }, [user]);
@@ -52,7 +55,7 @@ const Header = () => {
 
                 {/* User Actions */}
                 <div className="header__actions">
-                    <a href="/cart" className="header__cart" data-count={cartItems.length}>
+                    <a href="/cart" className="header_notifications" data-count={cartItems.length}>
                         <img src={cart} alt={"cart"} className={"search_icon"}/>
                     </a>
                     {isLoggedIn ? (
